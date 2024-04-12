@@ -4,6 +4,7 @@ module "ec2" {
   instance_type = var.instance_type
   subnet_id = module.public_subnet.subnet_id
   azs = var.azs
+  environment = var.environment
 }
 
 module "public_subnet" {
@@ -21,5 +22,5 @@ module "vpc" {
   vpc_cidr_block           = var.vpc_cidr
   vpc_enable_dns_hostnames = var.vpc_enable_dns_hostnames
   vpc_instance_tenancy     = var.vpc_instance_tenancy
-  environment              = "env-${terraform.workspace}"
+  environment              = "env-${var.environment}"
 }

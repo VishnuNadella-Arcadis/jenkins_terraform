@@ -5,6 +5,6 @@ resource "aws_instance" "ec2" {
   availability_zone = var.azs
 
   tags = {
-    "Name" = "mywebserver-${terraform.workspace}"
+    "Name" = "mywebserver-${var.environment}"
   }
 }

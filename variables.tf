@@ -33,6 +33,11 @@ variable "azs" {
   type        = string
 }
 
+variable "environment" {
+  description = "Env"
+  type        = string
+}
+
 # variable "public_subnet" {
 #   description = "A list of public subnet."
 #   type        = string

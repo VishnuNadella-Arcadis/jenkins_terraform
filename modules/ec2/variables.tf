@@ -15,3 +15,8 @@ variable "azs" {
   description = "Availability Zone"
   type        = string
 }
+
+variable "environment" {
+  description = "Env"
+  type        = string
+}
