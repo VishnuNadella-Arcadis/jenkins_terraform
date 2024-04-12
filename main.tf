@@ -2,11 +2,11 @@ module "ec2" {
   source        = "./modules/ec2"
   ami           = var.ami
   instance_type = var.instance_type
-  subnet_id = var.public_subnet
+  subnet_id = module.public_subnet
   azs = var.azs
 }
 
-module "public_subnets" {
+module "public_subnet" {
 #   count                   = length(var.public_subnet)
   source                  = "./modules/subnets"
   type                    = "public"

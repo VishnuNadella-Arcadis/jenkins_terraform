@@ -33,7 +33,7 @@ variable "azs" {
   type        = string
 }
 
-variable "public_subnet" {
-  description = "A list of public subnet."
-  type        = string
-}
+# variable "public_subnet" {
+#   description = "A list of public subnet."
+#   type        = string
+# }
