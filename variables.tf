@@ -27,3 +27,13 @@ variable "public_subnet" {
   description = "Subnet ID"
   type        = string
 }
+
+variable "azs" {
+  description = "Availability Zone"
+  type        = string
+}
+
+variable "public_subnet" {
+  description = "A list of public subnet."
+  type        = string
+}

@@ -10,3 +10,8 @@ variable "subnet_id" {
   description = "Subnet ID"
   type        = string
 }
+
+variable "azs" {
+  description = "Availability Zone"
+  type        = string
+}

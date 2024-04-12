@@ -3,6 +3,17 @@ module "ec2" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id = var.public_subnet
+  azs = var.azs
+}
+
+module "public_subnets" {
+#   count                   = length(var.public_subnet)
+  source                  = "./modules/subnets"
+  type                    = "public"
+  vpc_id                  = module.vpc.vpc_id
+  subnet_cidr_block       = var.public_subnet
+  azs                     = var.azs
+  map_public_ip_on_launch = true
 }
 
 module "vpc" {
