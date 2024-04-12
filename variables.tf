@@ -17,3 +17,8 @@ variable "vpc_instance_tenancy" {
   type        = string
   default     = "default"
 }
+
+variable "vpc_cidr" {
+  description = "The CIDR block for the Virtual Private Cloud (VPC) that will be created, specifying the IP address range."
+  type        = string
+}
