@@ -3,3 +3,11 @@ module "ec2" {
   ami           = var.ami
   instance_type = var.instance_type
 }
+
+module "vpc" {
+  source                   = "./vpc"
+  vpc_cidr_block           = var.vpc_cidr
+  vpc_enable_dns_hostnames = var.vpc_enable_dns_hostnames
+  vpc_instance_tenancy     = var.vpc_instance_tenancy
+  environment              = "env-${terraform.workspace}"
+}
